@@ -1,39 +1,40 @@
 import java.util.Random;
 
 public class Die {
+    private int sides;
+    private int value;
+
+    final private static Random random = new Random();
+
+    public Die() {
+
+    }
+
+    public int getSides() {
+        return sides;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
 
 
-        int sides;
-        int value;
+    }
 
-        public Die(){
-            sides=6;
+    public int roll() {
+     this.value=random.nextInt(sides)+1;
 
+    return value;}
 
-        }
-
-        public int getSides() {
-            return sides;
-        }
-
-        public static int randomGenerator(){
-            Random rn = new Random();
-
-            int result = rn.nextInt(6)+1;
-
-            return result;
-        }
-
-        public int roll(){
-
-
-
-
-
-
-            return 1;}
+    @Override
+    public String toString() {
+        return super.toString();
 
 
     }
 
 
+}
